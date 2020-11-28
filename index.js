@@ -3,9 +3,7 @@
 'use strict;'
 
 const files = require('./lib/files')
-const stravaAuth = require('./lib/strava-auth');
-const stravaUpload = require('./lib/strava-upload');
-
+const strava = require('./lib/strava');
 
 (async () => {
 
@@ -13,11 +11,10 @@ const stravaUpload = require('./lib/strava-upload');
   await files.verifyData()
 
   // set up strava client config
-  // const accessTokenData = await stravaAuth.getAccessToken();
-  // console.log(accessTokenData)
+  await strava.authorise();
 
   // upload the tracks
-  await stravaUpload()
+  await strava.upload()
 
   process.exit(0);
 
