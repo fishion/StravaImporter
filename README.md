@@ -27,3 +27,4 @@
 1. run "node index.js" to start the upload script
 1. Follow the instructions of the script to give the script appropriate permissions
 1. Strava API is rate limited (100 API calls in any 15 min period, 1000 in a day) so depending on how many workouts you have to upload, it may take some time to complete. Script gives plenty of output to confirm when it is rate limited.
+1. As script runs, it moves successfully processed files to 'Workouts_Success'. Any failures will be moved to 'Workout_Failures'. This way, the script can be safely stopped part way through and restarted if necessary. 
