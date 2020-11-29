@@ -27,4 +27,9 @@
 1. run "node index.js" to start the upload script
 1. Follow the instructions of the script to give the script appropriate permissions
 1. Strava API is rate limited (100 API calls in any 15 min period, 1000 in a day) so depending on how many workouts you have to upload, it may take some time to complete. Script gives plenty of output to confirm when it is rate limited.
-1. As script runs, it moves successfully processed files to 'Workouts_Success'. Any failures will be moved to 'Workout_Failures'. This way, the script can be safely stopped part way through and restarted if necessary. 
+1. As script runs, it moves successfully processed files to 'Workouts_Success'. Any failures will be moved to 'Workout_Failures'. This way, the script can be safely stopped part way through and restarted if necessary.
+
+## NOTE : Activity mapping
+* TCX format files only seem to support ‘biking’, ‘running’, ‘hiking’, ‘walking’ and ‘swimming’ activities with everything else marked as 'other'. These are only activity values recognised by Strava tcx imports and the only activities identified in the Endomondo tcx exports. The script doesn't make any attempt to correct this and when imported to Strava these 'other' activities appear to default to 'run'.
+* Some manual cleanup may be needed to resolve this post-import. It's easy to identify which files have '<Activity Sport="Other">' using grep, and then use the Endomondo calendar interface (while it still exists) to review what they should be and update manually in Strava.
+* The correct activity names are in fact exported alongside the tcx files in json files. Strava doesn't support importing these directly, but some post-processing may be possible to automatically fix the data in bulk.
