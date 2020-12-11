@@ -6,7 +6,7 @@
 ### Download an export of all your data from Endomondo
 * The script will work to upload any directory of tcx files, but the main use case for this repo is migrating workouts from Endomondo to Strava
 * From within your Endomondo account settings, you can request a full archive download of all of your data. Once requested, it currently seems to take a few days for this to be prepared, but it will eventually be ready to download. 
-* The script will expect to find a directory called 'data' in the application root. Create this directory 'data', Unzip the downloaded archive, and move the contents of the directory 'endomondo_$date' into it. You should now have a directory 'Workouts' containing the tcx files (as well as json files which will be ignored) in the data directory. 
+* The script will expect to find a directory called 'data' in the application root. Create this directory 'data', Unzip the downloaded archive, and move the contents of the directory 'endomondo_$date' into it. You should now have a directory 'Workouts' containing the tcx files (as well as json files which contain some additional data so leave these here) in the data directory. 
 
 ### Install node etc and package dependencies
 * Tested on node version (14.15.1)
