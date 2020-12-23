@@ -1,5 +1,5 @@
 .env
 .env_test
-
+data/**
 node_modules/
 .DS_Store
