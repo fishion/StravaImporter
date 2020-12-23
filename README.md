@@ -46,8 +46,8 @@ Run the image with your data and the Strava client credentials:
 $ docker run \
   -it --rm \
   -v "$PWD/data":/usr/src/app/data \
-  -e STRAVA_CLIENT_ID=test \
-  -e STRAVA_CLIENT_SECRET=test \
+  -e STRAVA_CLIENT_ID=$YOUR_APP_CLIENT_ID \
+  -e STRAVA_CLIENT_SECRET=$YOUR_APP_CLIENT_SECRET \
   -w /usr/src/app \
   strava-importer \
   node index.js
