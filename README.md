@@ -20,7 +20,11 @@
   >npm install
 
 ### Get a Strava Client ID and Secret
-1. Follow instructions on "How to create and account" (https://developers.strava.com/docs/getting-started/#account)
+1. Follow instructions on "How to create and account" (https://developers.strava.com/docs/getting-started/#account).
+You just need to fill:
+   1. Application name: StravaImporter
+   1. Website: https://github.com/fishion/StravaImporter/
+   1. Authorization Callback Domain: localhost
 1. Make a note of your Client ID and Client Secret - you'll be prompted for them later. If you prefer, you can export them as environment variables STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET
 
 ### run the script
