@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fast-xml-parser": "^3.17.6",
     "prompts": "^2.4.0",
     "strava-v3": "^2.0.9"
   }
